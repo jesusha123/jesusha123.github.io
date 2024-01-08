@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "Comet"
+date:   2024-01-07 15:31:54 -0800
+categories: jekyll update
+---
+## What is Comet
+
+Comet is a graphical API client used to send HTTP requests that I started developing during the holidays.
+
+Comet's vision is to be a fast, minimalistic, open-source, cross-platform, uses a small amount of disk space and uses a low amount of memory. Comet will support basic HTTP methods such as GET, POST, DELETE, PATCH, PUT, HEAD, TRACE, CONNECT, OPTIONS. It will support configuring header, query parameters and body data for each request and storing collections of request configurations.
+
+## Why I created Comet
+
+### Postman
+
+I use Postman to test API endpoints that I'm developing, or test existing services when I need to do integration work. Postman in general is an excellent product, it has good UI/UX, and a decent amount of features. Postman, the company, rolled out a feature forcing users to sign into Postman and sync collections to the cloud. The most egregious issue with this, is that collections stored in the cloud may contain sensitive data that I don't feel comfortable putting in the cloud.
+
+There are other issues with Postman that made me wonder if there are better alternatives. For instance, macOS Finder reports Postman installation uses a whopping 400MB of disk space. I opened Postman and macOS Activity Monitor, and the Activity Monitor reports Postman currently uses 600MB of RAM. Postman takes too many seconds to start up. Postman has way too many features that I question if they should be included in an API client.
+
+### Alternatives
+
+There are many existing alternative solutions to Postman. It seems the big alternatives are Insomnia and Hoppscotch. Both are being actively developed, have a big amount of features, have a lot of adopters and they are highly ranked on GitHub.
+
+I tested both of these applications, and they suffer from some of the shortcomings of Postman, such as too many features, using too much disk space (in the case of Insomnia), too much RAM or multiple seconds to start up. These are probably due to the choice of technology stack.
+
+Another alternative, is to create a new application that I hope is less resource intensive than Postman, Insomnia and Hoppscotch, that is fast, and does not have undesirable features such as online signups or phoning home. I started developing such an application and named it Comet.
+
+## Technology Stack
+
+I would like Comet to be one of the best performing graphical API clients, for that, I need to use a technology stack that is fast and has a low memory footprint. That pretty much rules out Electron. It is also my goal to use a widely tested, native looking, stable, mature, cross-platform technology.
+
+I considered choosing from a variety of technologies, such as Java with JavaFX, C#, C++ with Qt, C with GTK, Rust, Go and Dart with Flutter. I am biased towards C, C++, Rust and Go because they produce fast, native code. I tried Java with JavaFX a few years ago, but it seemed somewhat abandoned, having a lack of polish, and not easy to make native looking applications. I looked into Rust and Golang GUI frameworks, but I didn't find one that looked stable and mature enough, and Qt bindings for these languages didn't do it for me. GTK depends on too many technologies that either need to be installed separately for development such as meson and ninja, or compiled separately and bundled in the installation package such as Cairo, Pango, Glib, and others.
+
+I ended up choosing Qt. Qt is an excellent choice, hitting all requirements and more. It is mature, stable, well tested, native looking, native code, fast, cross-platform, the SDK is bundled as one single unit without a ton of extra dependencies. A couple of big disadvantages are, memory safety, and not able to find as many libraries to enhance the application if needed in the future.
+
+## Future Work
+
+Future work will involve developing Comet to a version 1.0 that is stable and support the most useful capabilities expected of an API client. My long term goal if Comet is well adopted, would be to work on also improving the UI/UX.
