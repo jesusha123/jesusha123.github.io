@@ -34,6 +34,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
+social_links:
+  - { platform: linkedin, user_url: "https://www.linkedin.com/in/jesus-herrera-arroyo-2284191a/" }
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
