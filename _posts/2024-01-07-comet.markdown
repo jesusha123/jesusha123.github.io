@@ -8,7 +8,7 @@ categories: jekyll update
 
 [Comet](https://github.com/jesusha123/comet) is a graphical API client used to send HTTP requests that I started developing during the holidays.
 
-Comet's vision is to be a fast, minimalistic, open-source, cross-platform, uses a small amount of disk space and uses a low amount of memory. Comet will support basic HTTP methods such as GET, POST, DELETE, PATCH, PUT, HEAD, TRACE, CONNECT, OPTIONS. It will support configuring header, query parameters and body data for each request and storing collections of request configurations.
+Comet's vision is to be a fast, minimalistic, cross-platform, uses a small amount of disk space and uses a low amount of memory. Comet will support basic HTTP methods such as GET, POST, DELETE, PATCH, PUT, HEAD, TRACE, CONNECT, OPTIONS. It will support configuring header, query parameters and body data for each request and storing collections of request configurations.
 
 ## Why I created Comet
 
